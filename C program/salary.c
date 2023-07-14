@@ -10,4 +10,4 @@ void main()
 	printf("hra=%f\n",hra);
 	printf("da=%f\n",da);
 	printf("Total salary=%f",total_salary);
-}
+}*
