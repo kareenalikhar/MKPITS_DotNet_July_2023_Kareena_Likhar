@@ -1,4 +1,4 @@
-#include<stdio.h>
+m #include<stdio.h>
 void factorial(int num,int *fact)
 {
 	while(num>0)
