@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 void main() 
 {
     int i,j,arr[5],freq[5],count;
@@ -8,7 +8,6 @@ void main()
         scanf("%d",&arr[i]);
         freq[i]=-1;
     }
-
     for(i=0;i<5;i++) 
 	{
         count=1;
