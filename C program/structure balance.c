@@ -5,23 +5,30 @@ struct balance
 	char name[20];
 	int acc_no,balance;
 };
-void main()
+
+void print(struct balance b1[3])
 {
-	struct balance b1[5];
 	int counter;
-	for(counter=0;counter<5;counter++)
+	printf("Account with balance less than 100;");
+	for(counter=0;counter<3;counter++)
 	{
-		printf("Name,account no and balance:");
-		scanf("%s%d%d",b1[counter].name,&b1[counter].acc_no,&b1[counter].balance);
-		
-}		printf("Account with balance less than 100;");
-		for(counter=0;counter<5;counter++)
-		{
 	if(b1[counter].balance<100)
 	{
 	printf("\nname=%s and account no=%d",b1[counter].name,b1[counter].acc_no);
 	}
 	}
+}
+void main()
+{
+	struct balance b1[3];
+	int counter;
+	for(counter=0;counter<3;counter++)
+	{
+		printf("Name,account no and balance:");
+		scanf("%s%d%d",b1[counter].name,&b1[counter].acc_no,&b1[counter].balance);
+		
+}		
+print(b1);
 }
 
 //Algorithm:
