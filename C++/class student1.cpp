@@ -23,11 +23,11 @@ float calculategrade()
 	cin>>m1>>m2>>m3;
 	total=m1+m2+m3;
 	cout<<"Total marks:"<<total<<endl;
-	per=(m1+m2+m3)/300*100;
+	per=(total)/300*100;
 	cout<<"percentage:"<<per<<endl;
 	if(per>=75)
 	{
-		cout<<"Grade is distintion"<<endl;
+		cout<<"Grade is distinction"<<endl;
 	}
 	else if(per>=60)
 	{
@@ -41,6 +41,7 @@ float calculategrade()
 	{
 		cout<<"Fail"<<endl;
 	}
+	return per;
 }	
 };
 int main()
