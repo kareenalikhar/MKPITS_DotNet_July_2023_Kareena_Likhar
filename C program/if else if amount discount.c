@@ -11,9 +11,10 @@ void main()
 	scanf("%d",&price);
 	printf("quantity:");
 	scanf("%d",&quantity);
-	printf("\n");
 
 	total_amount= price*quantity;
+	printf("Total=%d\n",total_amount);
+	printf("\n");
 	if(total_amount>=1000)
 	{
 		discount=total_amount*0.40;

@@ -11,7 +11,7 @@ int main()
 	printf("\npercentage:=%f",per);
 	if(per>=75)
 	{
-		printf("\ngrade=A");
+		printf("\ngrade=A"); 
 	}
 	else if(per<75 && per>=60)
 	{
