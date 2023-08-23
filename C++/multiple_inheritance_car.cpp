@@ -58,8 +58,8 @@ int main()
 	c1.getbrand("Scorpion");
 	c1.display();
 	c1.start();
-	c1.drive();
 	c1.accelerator();
+	c1.drive();
 	c1.brake();
 	c1.park();
 	c1.stop();
