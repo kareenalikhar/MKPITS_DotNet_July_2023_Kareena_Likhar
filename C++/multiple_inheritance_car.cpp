@@ -3,9 +3,9 @@ using namespace std;
 class Engine
 {
 	private:
-		string power;
+		int power;
 		public:
-			void getpower(string p)
+			void getpower(int p)
 			{
 				power=p;
 			}
@@ -17,8 +17,13 @@ class Engine
 			{
 				cout<<"Engine is stop"<<endl;
 			}
+			void displayp()
+			{
+				cout<<"Engine power:"<<power<<endl;
+			}
+			
 };
-class Vehical
+class Vehicle
 {
 	private:
 		string brand;
@@ -35,12 +40,12 @@ class Vehical
 			{
 				cout<<"Brake"<<endl;
 			}
-			void display()
+			void displayb()
 			{
 				cout<<"Brand: "<<brand<<endl;
 			}
 };
-class Car:public Engine,public Vehical
+class Car:public Engine,public Vehicle
 {
 	public:
 		void drive()
@@ -56,7 +61,9 @@ int main()
 {
 	Car c1;
 	c1.getbrand("Scorpion");
-	c1.display();
+	c1.displayb();
+	c1.getpower(150);
+	c1.displayp();
 	c1.start();
 	c1.accelerator();
 	c1.drive();
