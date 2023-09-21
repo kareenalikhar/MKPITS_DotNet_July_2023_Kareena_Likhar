@@ -11,45 +11,53 @@
 </head>
 
 <body style="background-image: url(download.jpg); background-repeat: no-repeat;background-size: cover;">
-    <h1 style="font-size: 30px; color: aliceblue;margin: 20px;">Bootstrap Form:</h1>
+   
+    <h2 class="text-light font-weight-bold m-3">Bootstrap Form:</h2>
 
-    <form>
-        <div class="container" style="float:left;width: 40%;height: 400px;margin-left: 200px;margin-top: 100px;color: aliceblue;">
-            <h3>Signup right now!</h3>
-            <hr color="aliceblue">
-            <p>
-                Setting a background image in Bootstrap can seem troublesome, especially for novice web developers. Thanks to this tutorial, you will not only learn how to use this functionality without any problems, but you will also learn advanced tricks that will allow you to create truly amazing projects with unconventional design.
-            </p>
-            <button type="submit" class="btn btn-outline-dark" style="margin-top: 80px;color: aliceblue;"><b>Learn More</b></button>
-        </div>
-    <div class="container" style="border: 1px solid ;float:left;width: 30%;height: 450px;margin-left: 100px;margin-top: 50px;">
-        
-        <!--img src="images.jpg" class="img-thumbnail" style="width: 25px; height: 25px; margin-left:150px;margin-top: 20px;"-->
-        <h4 style="text-align: center;color: aliceblue;margin-top: 10px;">Register:</h4>
-        
-        <hr color="aliceblue ">
-        <div class="form-group">
-            <label for="name" style="color: aliceblue;">Your Name:</label>
-                <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name"/> 
-        </div>
-        <div class="form-group">
-            <label for="email" style="color:aliceblue">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="email" name="email"/>
-        </div>
+    
+<form>
+<div class="row">
+    <div class="col-md-1"></div>
+            <div class="col-md-5 mt-5 ml-2 p-4">
+                <div class="container">
+                    <h3 class="text-light">Signup right now!</h3>
+                        <hr color="aliceblue">
+                            <p class="text-light">
+                                Setting a background image in Bootstrap can seem troublesome, especially for novice web developers. Thanks to this tutorial, you will not only learn how to use this functionality without any problems, but you will also learn advanced tricks that will allow you to create truly amazing projects with unconventional design.
+                            </p>
+                            <button type="submit" class="btn btn-outline-dark text-light" style="margin-top: 80px;"><b>Learn More</b>
+                            </button>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <label for="pass" style="color:aliceblue">Password:</label>
-                <input type="pass" class="form-control" id="pass" placeholder="password" name="pass"/>
-        </div>
-        <button type="submit" class="btn btn-info" style="margin-left: 170px;margin-top: 30px;"><b>Signup</b></button>
-
-        <hr color="aliceblue ">
-        
             
+    
+        <div class="col-md-4 mt-4 ml-5">
+            <div class="container">
         
+                <h4 style="text-align: center;margin-top: 10px;" class="text-light">Register:</h4>
         
+                    <hr color="aliceblue ">
+                        <div class="form-group">
+                            <label for="name" class="text-light">Your Name:</label>
+                                <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name"/> 
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="text-light">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="email" name="email"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass" class="text-light">Password:</label>
+                                <input type="pass" class="form-control" id="pass" placeholder="password" name="pass"/>
+                        </div>
+             </div>
+       
+                <button type="submit" class="btn btn-info" style="margin-left: 170px;margin-top: 30px;"><b>Signup</b></button>
+
+                <hr color="aliceblue ">
+        </div>
     </div>
-</form>
+    </form>
 
 </body>
 </html>
