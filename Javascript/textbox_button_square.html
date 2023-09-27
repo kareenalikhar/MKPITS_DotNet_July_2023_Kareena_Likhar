@@ -1,0 +1,22 @@
+<!--2- wap to accept num from the user in textbox and then print square of a number below button in span-->
+
+<html>
+    <script language="javascript">
+
+        function square()
+        {
+            var num=document.f1.t1.value;
+            var square=num*num;
+            document.getElementById("result").innerHTML="Square ="+square;
+        }
+
+    </script>
+
+    <form name="f1">
+        Enter number:<input type="text" name="t1" /><br><br>
+        <input type="button" value="OK" onclick="square();"/>
+        <br><br>
+        <span id="result">Result</span>
+
+    </form>
+</html>

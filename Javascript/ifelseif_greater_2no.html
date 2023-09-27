@@ -1,0 +1,29 @@
+<!--11- wap to accept 2 no and display greater no.-->
+
+<html>
+    <script language="javascript">
+        
+        function greater()
+        {
+        var num1=document.getElementById("n1").value;
+        var num2=document.getElementById("n2").value;
+        if(num1>num2)
+        {
+            document.getElementById("result").innerHTML="Greater number = " +num1;
+        }
+        else if(num2>num1)
+        {
+            document.getElementById("result").innerHTML="Greater number = " +num2;
+        }
+    }
+    </script>
+
+    <form name="f1">
+        Enter Number1:<input type="text" id="n1"/><br><br>
+        Enter Number2:<input type="text" id="n2"/><br><br>
+        <input type="button" value="Greater No" onclick="greater();"/>
+        <br><br>
+        <span id="result">Result</span>
+
+    </form>
+</html>

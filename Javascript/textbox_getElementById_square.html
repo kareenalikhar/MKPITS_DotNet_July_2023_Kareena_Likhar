@@ -1,0 +1,20 @@
+<!--3- accepting value from textbox using getElementById method-->
+
+<html>
+    <script language="javascript">
+
+        function display()
+        {
+            var num=document.getElementById("t1").value;
+            var square=num*num;
+            document.getElementById("result").innerHTML="Square = "+square;
+        }
+    </script>
+</html>
+
+<form name="f1">
+    Enter number:<input type="text" id="t1" name="t1" /><br><br>
+    <input type="button" value="OK" onclick="display();" />
+    <br><br>
+    <span id="result">Result</span>
+</form>
