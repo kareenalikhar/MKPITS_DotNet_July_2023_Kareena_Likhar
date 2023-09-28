@@ -27,9 +27,90 @@
         <div class="form-group">
             <label for="gender">Gender</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="gender1" va
+                <input class="form-check-input" type="radio" name="gender" id="gender1" value="male">
+                <label class="form-check-label" for="gender1">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender2" value="female">
+                <label class="form-check-label" for="gender2">
+                    Female
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Courses</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="course1" id="course1" value="dotnet">
+                    <label class="form-check-label"  for="course1">Dotnet</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="course2" id="course2" value="java">
+                    <label class="form-check-label" for="course2">Java</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="button" onclick="display();">
+                Submit
+            </button>
             </div>
         </div>
     </form>
 </div>
+<div class="container">
+    <h5>User Details</h5>
+        <div class="row">
+            <div class="col">
+                First Name:<span id="fn"></span>
+            </div>
+        </div>   
+        <div class="row">
+            <div class="col">
+                Last Name:<span id="ln"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Gender:<span id="gen"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Courses: <span id="col"></span>
+            </div>
+        </div>
+</div>
+
+<script language="javascript">
+    function display()
+    {
+        var fname=document.getElementById("firstname").value;
+        var lname=document.getElementById("lastname").value;
+
+        document.getElementById("fn").innerHTML=fname;
+        document.getElementById("ln").innerHTML=lname;
+
+        //for radio button
+        var ele=document.getElementsByName("gender");
+        for(i=0;i<ele.length;i++)
+        {
+            if(ele[i].checked)
+            document.getElementById("gen").innerHTML=ele[i].value;
+        }
+        //for checkbox
+        var c1=document.getElementById("course1").checked;
+        var co="";
+        if(c1==true)
+        {
+            co="Dotnet";
+        }
+        var c2=document.getElementById("course2").checked;
+        if(c2==true)
+        {
+            co+="Java";
+        }
+        document.getElementById("col").innerHTML=co;
+    }
+</script>
 </html>
