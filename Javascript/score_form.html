@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <b style="font-size: 20px;">Score Form:</b>
+    </div>
+    <div class="container">
+        <form>
+        <div>
+            <p>1.What is the capital of India?</p>
+            <input type="radio" name="capital" value="d1">Delhi
+            <input type="radio" name="capital" value="d2">Mumbai
+            <br><br>
+            <p>2.What is the capital of Maharastra?</p>
+            <input type="radio" name="capital2" value="n1">Nagpur
+            <input type="radio" name="capital2" value="n2">Mumbai
+            <br><br>
+            <p>2.What is the capital of Mp?</p>
+            <input type="radio" name="capital3" value="m1">Bhopal
+            <input type="radio" name="capital3" value="m2">Nagpur
+        </div>
+        <br><br>
+        
+            <button class="btn btn-primary" type="button" onclick="submitAnswer()">Submit</button>
+    
+        </form>
+</div>
+
+        <div id="score" class="container"></div> <!-- Result will be displayed here -->
+
+        <script>
+            function submitAnswer() {
+    var score = 0;
+
+    // Question 1
+    var selectedCapital1 = document.querySelector('input[name="capital"]:checked').value;
+    var correctCapital1 = "d1";
+    if (selectedCapital1 === correctCapital1) 
+    {
+        score++;
+    }
+
+    // Question 2
+    var selectedCapital2 = document.querySelector('input[name="capital2"]:checked').value;
+    var correctCapital2 = "n2";
+    if (selectedCapital2 === correctCapital2) 
+    {
+        score++;
+    }
+
+    // Question 3
+    var selectedCapital3 = document.querySelector('input[name="capital3"]:checked').value;
+    var correctCapital3 = "m1";
+    if (selectedCapital3 === correctCapital3) 
+    {
+        score++;
+    }
+
+    var scoreElement = document.getElementById("score");
+    scoreElement.textContent = "Score: " + score + "/3";
+}
+
+        </script>
+    </div>
+</body>
+
+</html>

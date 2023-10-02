@@ -16,42 +16,59 @@
     <div class="container">
         <form name="f1">
             <div class="form-group">
-                Enter Number 1:<input type="number" class="form-control" name="t1"><br>
-                Enter Number 2:<input type="number" class="form-control" name="t1"><br>
+                <label for="n1"> Enter Number 1:</label>
+                    <input type="text" class="form-control" name="n1" id="n1"/>
+                    <label for="n1"> Enter Number 2:</label>
+                    <input type="text" class="form-control" name="n2" id="n2"/>
             </div>
             <div class="form-check">
                 <div class="row">
                     <div class="col">
-                        <input type="checkbox" class="form-check-input" name="a1" onclick="add();">Add
+                        <input type="checkbox" class="form-check-label" name="a1" id="a1" onclick="add();">
+                        <label for="a1">Addition</label>
                     </div>
                     <div class="col">
-                        <input type="checkbox" class="form-check-input" name="a1" onclick="sub();">Sub
+                        <input type="checkbox" class="form-check-input" name="s1" id="s1" onclick="sub();">
+                        <label for="s1">Substraction</label>
                     </div>
                     <div class="col">
-                        <input type="checkbox" class="form-check-input" name="a1" onclick="mul();">Mul
+                        <input type="checkbox" class="form-check-input" name="m1" id="m1" onclick="mul();">
+                        <label for="m1">Multiplication</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" class="form-check-input" name="d1" id="d1" onclick="div();">
+                        <label for="d1">Division</label>
                     </div>
                 </div>
-            </div><br><br>
-            <button type="button" class="btn btn-primary" onclick="display();">Submit</button>
+                </div><br>
+                <div class="container">
+            <button class="btn btn-primary">Submit</button>
+        </div>
         </form>
-    </div>
+    
 
     <div class="container">
         <div class="row">
             <div class="col">
-                Addition is: <span id="ad"></span>
+                Addition is: <span id="radd"></span>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                Substraction is: <span id="sb"></span>
+                Substraction is: <span id="rsub"></span>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                Multiplication is: <span id="ml"></span>
+                Multiplication is: <span id="rmul"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Division is: <span id="rdiv"></span>
             </div>
         </div>
     </div>
@@ -60,32 +77,39 @@
 <script language="javascript">
     function add()
     {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t1.value);
+        var num1=parseInt(document.getElementById("n1").value);
+        var num2=parseInt(document.getElementById("n2").value);
         var result=num1+num2;
+        document.getElementById("radd").innerHTML=result;
         
     }
 
     function sub()
     {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t1.value);
+        var num1=parseInt(document.getElementById("n1").value);
+        var num2=parseInt(document.getElementById("n2").value);
         var result=num1-num2;
-        document.getElementById("sb").innerHTML=(""+result);
+        document.getElementById("rsub").innerHTML=result;
     }
 
     function mul()
     {
-        var num1=parseInt(document.f1.t1.value);
-        var num2=parseInt(document.f1.t1.value);
+        var num1=parseInt(document.getElementById("n1").value);
+        var num2=parseInt(document.getElementById("n2").value);
         var result=num1*num2;
-        document.getElementById("ml").innerHTML=(""+result);
+        document.getElementById("rmul").innerHTML=result;
+    }
+
+    function div()
+    {
+        var num1=parseInt(document.getElementById("n1").value);
+        var num2=parseInt(document.getElementById("n2").value);
+        var result=num1/num2;
+        document.getElementById("rdiv").innerHTML=result;
     }
     function display()
     {
-        add()=document.getElementById("ad").innerHTML=(""+result);
-        document.f1.t1.value=sub();
-        document.f1.t1.value=mul();
+        
 
     }
 </script>
