@@ -1,0 +1,52 @@
+<!--9 wap to accept empname and basicsalary
+calculate hra ie 23% of basicsalary, da ie 43% of basic salary
+then calculate total salary =hra+da+basicsalary-->
+
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+      <div class="jumbotron text-center" >
+    Salary bonus
+    </div>
+      <div class="container">
+      <form name="f1" class="form-group">
+        Enter Employee Name:<input type="text" id="e1" name="e1" class="form-control"/><br><br>
+        Basic Salary: <input type="text" id="s1" name="s1" class="form-control"/><br><br>
+        <input type="button" value="Submit" class="btn btn-primary" onclick="check();"/><br><br>
+        Employee Name: <span id="name"></span><br>
+        Basic Salary: <span id="salary"></span><br>
+        Hra of salary: <span id="hra"></span><br>
+        Da of salary: <span id="da"></span><br>
+        Total Salary: <span id="total"></span>
+      </form>
+      </div>
+
+      <script language="javascript">
+        function check()
+        {
+            var name = document.getElementById("e1").value;
+            var salary = parseInt(document.getElementById("s1").value);
+
+            document.getElementById("name").innerHTML = "" + name;
+            document.getElementById("salary").innerHTML = "" + salary;
+
+            var hra=salary*0.23;
+            document.getElementById("hra").innerHTML=""+hra;
+            var da=salary*0.43;
+            document.getElementById("da").innerHTML=""+da;
+
+            var total=salary+hra+da;
+            document.getElementById("total").innerHTML=""+total;
+
+        }
+      </script>
+
+
+</html>
