@@ -1,0 +1,48 @@
+<!--wap to print odd no. between 1 and 100-->
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            wap to print even no. between 1 and 100 </div>
+        <form >
+            Enter Number: <input type="text" class="form-control" id="t1" name="t1"/><br><br>
+            <input type="button" class="btn-info" value="Submit" onclick="display();"/>
+            <br><br>
+            Result: <br> <span id="res"></span>
+        </form>
+    </div>
+  </body>
+
+  <script>
+    function display() 
+    {
+    var num = parseInt(document.getElementById("t1").value);
+    var result = "";
+    var i=1;
+
+    while (i <= num) 
+    {
+        if (i % 2 == 0) 
+        {
+            result += i + ", ";
+            
+        }
+        i++;
+    }
+
+    
+
+    document.getElementById("res").innerHTML = result;
+
+    }
+    </script>
