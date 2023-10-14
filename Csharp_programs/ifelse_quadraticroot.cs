@@ -21,9 +21,9 @@ namespace ifelse_quadraticroot
             c = Convert.ToInt32(Console.ReadLine());
             result=( b * b )- 4 * a *c;
 
-            if (a!=0)
+            if (result!=0)
             {
-                Console.WriteLine("Root are imaginary;");
+                Console.WriteLine("Root are imaginary;"+result);
             }
             else 
             {
