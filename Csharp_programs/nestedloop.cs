@@ -18,18 +18,22 @@ namespace nestedloop
             width = Convert.ToInt32(Console.ReadLine());
 
 
-            for (i = num; i >= 1; i--) ;
+            for (i = num; i >= 1; i--)
             {
-                for (j = 1; j <= i; j++) ;
+                for (j = 1; j <= i; j++)
                 {
-                    Console.WriteLine(width);
+
+                    Console.Write(num);
 
 
                 }
-                Console.WriteLine();
-                Console.ReadKey();
+                Console.WriteLine(" ");
+
+
 
             }
+            Console.ReadKey();
+
 
         }
     }
