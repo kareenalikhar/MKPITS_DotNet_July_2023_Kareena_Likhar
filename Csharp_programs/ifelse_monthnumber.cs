@@ -10,7 +10,7 @@ namespace ifelse_monthnumber
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             int num;
             Console.WriteLine("Enter month number: ");
@@ -19,9 +19,13 @@ namespace ifelse_monthnumber
             {
                 Console.WriteLine("Month have 31 days");
             }
-            else
+            else if(num==4||num==6||num==9||num==11)
             {
                 Console.WriteLine("Month have 30 days");
+            }
+            else if(num==2)
+            {
+                Console.Write("Month have 28 or 29 days");
             }
             Console.ReadKey();
         }

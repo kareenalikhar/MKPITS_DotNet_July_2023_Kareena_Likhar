@@ -28,13 +28,13 @@ namespace ifelse_geometricalshape
             }
             else if(choice == 2)
             {
-                int l, h;
+                int l, b;
                 float area1;
                 Console.Write("Enter length: ");
                 l= Convert.ToInt32(Console.ReadLine());
                 Console.Write("Enter breadth: ");
-                h= Convert.ToInt32(Console.ReadLine());
-                area1 = l * h;
+                b= Convert.ToInt32(Console.ReadLine());
+                area1 = l * b;
                 Console.WriteLine("Area of rectangle: " + area1);
             }
             else if (choice == 3)
