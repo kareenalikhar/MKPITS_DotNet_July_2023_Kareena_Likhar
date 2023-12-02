@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace winform_square
+namespace winform_table
 {
     public partial class Form1 : Form
     {
@@ -16,11 +16,12 @@ namespace winform_square
         {
             InitializeComponent();
         }
-        Square s=new Square();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            s.sq(Convert.ToInt32(textBox1.Text));
-            label2.Text="Square: "+s.result;
+            Table t=new Table();
+            string r=t.tab(Convert.ToInt32(textBox1.Text));
+            label2.Text = r;
         }
     }
 }

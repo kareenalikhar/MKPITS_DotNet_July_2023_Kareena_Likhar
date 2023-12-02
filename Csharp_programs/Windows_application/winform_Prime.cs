@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace winform_square
+namespace winform_prime
 {
     public partial class Form1 : Form
     {
@@ -16,11 +16,12 @@ namespace winform_square
         {
             InitializeComponent();
         }
-        Square s=new Square();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            s.sq(Convert.ToInt32(textBox1.Text));
-            label2.Text="Square: "+s.result;
+            Prime p=new Prime();
+            string res=p.display(Convert.ToInt32(textBox1.Text));
+            label2.Text = res;
         }
     }
 }
