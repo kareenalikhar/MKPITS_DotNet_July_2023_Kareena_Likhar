@@ -26,3 +26,20 @@ insert into TableCity values(1001,'Visakhapatnam',101),(1002,'Vijayvada',101),(1
 select * from TableNation
 select * from TableState
 select * from TableCity
+
+create table TableCourseRegDetail(CourseRegID int identity primary key,CategoryID int,
+FullName varchar(1500),GenderId int);
+
+create table TableRegAddress(RegAddressID int identity primary key,
+CourseRegID int,NationID int,StateID int,CityID int,
+foreign key(CourseRegID) references TableCourseRegDetail(CourseRegID),
+foreign key(NationID) references TableNation(NationID),
+foreign key(StateID) references TableState(StateID),
+foreign key(CityID) references TableCity(CityID));
+
+create table TableFeeDetail(FeeID int identity,CourseRegID int,TotalAmount decimal,MinPer decimal,PaidAmount decimal,BalAmount decimal,PaidDate datetime,
+foreign key(CourseRegID) references TableCourseRegDetail(CourseRegID));
+
+select * from TableCourseRegDetail
+select * from TableRegAddress
+select * from TableFeeDetail
