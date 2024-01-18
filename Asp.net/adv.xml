@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>abc.jpg</ImageUrl>
+		<Impressions>6</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>back.jpg</ImageUrl>
+		<Impressions>4</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>download.jpg</ImageUrl>
+		<Impressions>2</Impressions>
+	</Ad>
+</Advertisements>
+
